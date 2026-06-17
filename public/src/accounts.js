@@ -1,30 +1,13 @@
 function findAccountById(accounts, id) {
-  // YOUR SOLUTION HERE
   return accounts.find((identity) => identity.id === id);
-  // Hint: You can use the [`find()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) method here. 
 }
 
 function sortAccountsByLastName(accounts) {
-  // YOUR SOLUTION HERE
-  return accounts.sort((accountA, accountB) => {
-    const lastNameA = accountA.name.last.toLowerCase();
-    const lastNameB = accountB.name.last.toLowerCase();
-
-    if (lastNameA < lastNameB) {
-      return -1;
-    }
-    if (lastNameA > lastNameB) {
-      return 1;
-    }
-    return 0;
-  });
-  // Hint: You can use the [`sort()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) method here. 
+  return accounts.sort((accountA, accountB) => accountA.name.last.toLowerCase() > accountB.name.last.toLowerCase() ? 1 : -1);
 }
 
 function getAccountFullNames(accounts) {
-  // YOUR SOLUTION HERE
     return accounts.map((account) => `${account.name.first} ${account.name.last}`);
-  // Hint: You can use the [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) method here.
 }
 
 // NOTE: YOU DON'T HAVE TO EDIT THE FUNCTIONS BELOW
