@@ -8,11 +8,11 @@ This project requires the implementation of functionality that will allow users 
 *   **`sortAccountsByLastName()`:** Use `sort()` to sort a collection of accounts by the account holders last name.
 *   **`getAccountFullNames()`:** Use `map()` to pull the full name associated with a given account.
 *   **`findAuthorById()`:** Use `find()` to search for Author using the author id number. 
-* **`findBookById()`:** Use `find()` to search for books using the book id number
-* **`getTotalBooksCount()`:** Use `books.length` to return the total number of objects that represent the collection of books
-* **`getTotalBooksCount()`:** Use `books.length` to return the total number of objects that represent the collection of books
-* **`getTotalAccountsCount()`:** Use `accounts.length` to return the total number of objects that represent the active accounts 
-* **`getBooksBorrowedCount()`:** Use `filter` to reveal the number of books that are currently being borrowed
+*   **`findBookById()`:** Use `find()` to search for books using the book id number
+*   **`getTotalBooksCount()`:** Use `books.length` to return the total number of objects that represent the collection of books
+*   **`getTotalBooksCount()`:** Use `books.length` to return the total number of objects that represent the collection of books
+*   **`getTotalAccountsCount()`:** Use `accounts.length` to return the total number of objects that represent the active accounts 
+*   **`getBooksBorrowedCount()`:** Use `filter` to reveal the number of books that are currently being borrowed
 
 ---
 
@@ -28,9 +28,9 @@ This project requires the implementation of functionality that will allow users 
 
 This is a very simple site where each page is accessible from a global sticky top navigation bar. 
 
-* **Entry Point/Overall Stats:** The home page holds general stats concerning details about the inventory and borrowing history.
-* **Stats by Book:** This page contains information on borrow status and details of each book.
-* **Stats by Account:** This page contains account holder information and any books that they are current borrowing.
+*   **Entry Point/Overall Stats:** The home page holds general stats concerning details about the inventory and borrowing history.
+*   **Stats by Book:** This page contains information on borrow status and details of each book.
+*   **Stats by Account:** This page contains account holder information and any books that they are current borrowing.
 ---
 
 ## 4. Justifications & Trade-offs
@@ -44,7 +44,7 @@ This is a very simple site where each page is accessible from a global sticky to
 
 ## 5. Challenges & Troubleshooting
 
-*   The biggest challenge I faced was figuring out how to get the `getBooksBorrowedCount(books)` function to work. The function requires accessing data nested within two objects and two arrays. I first approached this function with a combination of a `map()` and `filter()` function. However, this would always return total number of items in the array rather than a filtered number. This is because the `map()` function would return every array regardless of whether the information had been filtered out of it. Once I discovered this, I resorted to using two levels of the `filter()` function; one to filter through the objects in the array that I needed to access, and the other to make sure that they displayed only the top level objects that contained filtered content.
+The biggest challenge I faced was figuring out how to get the `getBooksBorrowedCount(books)` function to work. The function requires accessing data nested within two objects and two arrays. I first approached this function with a combination of a `map()` and `filter()` function. However, this would always return total number of items in the array rather than a filtered number. This is because the `map()` function would return every array regardless of whether the information had been filtered out of it. Once I discovered this, I resorted to using two levels of the `filter()` function; one to filter through the objects in the array that I needed to access, and the other to make sure that they displayed only the top level objects that contained filtered content.
 
 
 ---
